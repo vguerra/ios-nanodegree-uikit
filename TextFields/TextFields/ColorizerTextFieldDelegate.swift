@@ -64,7 +64,7 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
     }
     
     /**
-    * accepts an array of collors, and return a blend of all the elements
+    * accepts an array of colors, and return a blend of all the elements
     */
     
     func blendColorArray(colors: [UIColor]) -> UIColor {

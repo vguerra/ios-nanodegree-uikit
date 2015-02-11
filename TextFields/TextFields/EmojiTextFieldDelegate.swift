@@ -25,9 +25,6 @@ class EmojiTextFieldDelegate : NSObject, UITextFieldDelegate {
         translations["cat"] = "\u{E04F}"
     }
     
-    
-    
-    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         var replacedAnEmoji = false
