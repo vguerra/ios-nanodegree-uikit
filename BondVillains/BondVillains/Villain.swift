@@ -9,27 +9,24 @@
 import Foundation
 import UIKit
 
-
 struct Villain {
-    
+
     let name: String
     let evilScheme: String
     let imageName: String
-    
+
     static let NameKey = "NameKey"
     static let EvilSchemeKey = "EvilScheme"
     static let ImageNameKey = "ImageNameKey"
-    
+
     // Generate a Villain from a three entry dictionary
 
     init(dictionary: [String : String]) {
-    
         self.name = dictionary[Villain.NameKey]!
         self.evilScheme = dictionary[Villain.EvilSchemeKey]!
         self.imageName = dictionary[Villain.ImageNameKey]!
     }
 }
-
 
 /**
 * This extension adds static variable allVillains. An array of Villain objects
@@ -37,18 +34,18 @@ struct Villain {
 
 extension Villain {
 
-    // Generate an array full of all of the villains in
+    // Generate an array full of all of the villains
     static var allVillains: [Villain] {
-        
+
         var villainArray = [Villain]()
-        
+
         for d in Villain.localVillainData() {
             villainArray.append(Villain(dictionary: d))
         }
-        
+
         return villainArray
     }
-    
+
     static func localVillainData() -> [[String : String]] {
         return [
             [Villain.NameKey : "Mr. Big", Villain.EvilSchemeKey : "Smuggle heroin.", Villain.ImageNameKey : "Big"],
@@ -66,4 +63,5 @@ extension Villain {
             [Villain.NameKey : "Max Zorin", Villain.EvilSchemeKey : "Destroy Silicon Valley with an earthquake and flood.", Villain.ImageNameKey : "Zorin"]
         ]
     }
+
 }
