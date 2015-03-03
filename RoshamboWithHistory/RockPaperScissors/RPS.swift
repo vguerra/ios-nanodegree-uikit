@@ -26,16 +26,19 @@ enum RPS {
         }
     }
 
-    // The defeats method defines the hierarchy of moves, Rock defeats Scissors etc. 
+    // The defeats method defines the hierarchy of moves, Rock defeats Scissors etc.
     func defeats(opponent: RPS) -> Bool {
+        
         switch (self, opponent) {
-        case (.Paper, .Rock), (.Scissors, .Paper), (.Rock, .Scissors):
-            return true;
-        default:
+        case (.Rock, .Paper), (.Paper, .Scissors), (.Scissors, .Rock):
             return false;
+        default:
+            return true;
         }
     }
+
 }
+
 
 extension RPS: Printable {
     

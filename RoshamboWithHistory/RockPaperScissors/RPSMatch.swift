@@ -8,17 +8,20 @@
 
 import Foundation
 
-// The RPSMatch struct stores the results of a match.
-// Later in the course we will store multiple matches in an array, so users can track their match history.
+
 struct RPSMatch {
     
     let p1: RPS
     let p2: RPS
+    let date: NSDate
     
-    
-    init(p1: RPS, p2: RPS) {
+    /**
+    * if initialized without a date, use the current date
+    */
+    init(p1: RPS,p2: RPS) {
         self.p1 = p1
         self.p2 = p2
+        self.date = NSDate()
     }
     
     var winner: RPS {

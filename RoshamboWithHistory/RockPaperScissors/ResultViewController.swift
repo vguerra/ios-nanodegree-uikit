@@ -49,7 +49,6 @@ class ResultViewController: UIViewController {
             return "It's a tie!"
         }
         
-        // Here we build up the results message "RockCrushesScissors. You Win!" etc.
         return match.winner.description + " " + victoryModeString(match.winner) + " " + match.loser.description + ". " + resultString(match)
     }
     
@@ -85,6 +84,7 @@ class ResultViewController: UIViewController {
         if match.p1 == match.p2 {
             name = "itsATie"
         }
+        
         return UIImage(named: name)!
     }
 }
