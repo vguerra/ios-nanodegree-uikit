@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let dictionary = self.model[indexPath.row]
         
         cell.textLabel?.text = dictionary["text"]
-        cell.detailTextLabel!.text = dictionary["detail"]
+        cell.detailTextLabel?.text = dictionary["detail"]
         
         return cell
     }
