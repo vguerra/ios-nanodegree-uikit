@@ -90,11 +90,7 @@ class ColorizerTextFieldDelegate : NSObject, UITextFieldDelegate {
         
         return UIColor(red: colorComponents[0], green: colorComponents[1], blue: colorComponents[2], alpha: colorComponents[3])
     }
-   
-    func textFieldShouldClear(textField: UITextField) -> Bool {
-        return true;
-    }
-    
+       
 }
 
 
