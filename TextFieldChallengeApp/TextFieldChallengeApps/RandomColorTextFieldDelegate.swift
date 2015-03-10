@@ -24,7 +24,7 @@ class RandomColorTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
     
     func randomColor() -> UIColor {
-        let randomIndex = Int(arc4random()) % colors.count
+        let randomIndex = Int(arc4random() % UInt32(colors.count))
         
         return colors[randomIndex]
     }
