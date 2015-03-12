@@ -38,14 +38,14 @@ class RockPaperScissorsViewController: UIViewController {
         let computersMove = RPS()
         let match = RPSMatch(p1: playersMove, p2: computersMove)
         
-        // Add it to the history
+        // Add match to the history
         history.append(match)
         
-        // Get the storyboard and ResultViewController
+        // Get the Storyboard and ResultViewController
         var storyboard = UIStoryboard (name: "Main", bundle: nil)
         var resultVC = storyboard.instantiateViewControllerWithIdentifier("ResultViewController") as ResultViewController
         
-        // Communicate the match
+        // Communicate the match to the ResultViewController
         resultVC.match = match
         
         self.presentViewController(resultVC, animated: true, completion: nil)

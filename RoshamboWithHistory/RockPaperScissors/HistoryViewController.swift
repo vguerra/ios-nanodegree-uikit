@@ -16,7 +16,6 @@ class HistoryViewController : UIViewController, UITableViewDelegate, UITableView
     var history: [RPSMatch]!
     
     // Table View Delegate
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return history.count
     }

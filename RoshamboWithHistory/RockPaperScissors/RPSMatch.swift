@@ -8,6 +8,7 @@
 
 import Foundation
 
+// The RPSMatch struct represents a single match. You'll learn more about structs in Lesson 5's Swift session! 
 
 struct RPSMatch {
     
