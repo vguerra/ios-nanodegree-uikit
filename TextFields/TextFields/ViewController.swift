@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Text Field Delegate objects
     let emojiDelegate = EmojiTextFieldDelegate()
     let colorizerDelegate = ColorizerTextFieldDelegate()
+    let randomColorDelegate = RandomColortextFieldDelegate()
     
     // Life Cycle Methods
     
@@ -30,13 +31,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Set the three delegates
         self.textField1.delegate = emojiDelegate
-        self.textField2.delegate = colorizerDelegate
+//        self.textField2.delegate = colorizerDelegate
+        self.textField2.delegate = randomColorDelegate
         self.textField3.delegate = self
     }
 
     
-    // Text Field Delegate Methods
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        var currentText = textField.text
+        var reversedText = ""
+        for c in currentText {
+            reversedText = String(c) + reversedText
+        }
+        textField.text = reversedText
+        return true
+    }
     
+    // Text Field Delegate Methods
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 
         // Figure out what the new text will be, if we return true
